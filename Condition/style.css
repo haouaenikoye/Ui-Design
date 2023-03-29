@@ -1,0 +1,72 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-size: 10px;
+    background-color: #222222;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-button{
+    padding: 3rem;
+    width: 15rem;
+    height: auto;
+    background-color: rgb(179, 9, 9);
+    border-radius: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 250ms;
+}
+
+div{
+    transition: all 250ms;
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.delete-first-action{
+    z-index: 4;
+    background-color: rgb(175, 28, 28);
+}
+
+.delete-second-action{
+    z-index: 3;
+    opacity: 0;
+    transform: translateX(0);
+}
+.empty{
+    z-index: 2;
+    transform: translateX(-100%);
+    border-radius: 0;
+    background-color: rgb(175, 28, 28);
+    width: 100%;
+    height: 100%;
+    transition: all 3000ms;
+}
+
+.delete-button.active > .delete-first-action{
+    opacity: 0;
+}
+
+.empty.active{
+    transform: translateX(0);
+}
+
+.delete-second-action.active{
+    opacity: 1;
+}

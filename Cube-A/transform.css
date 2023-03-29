@@ -1,0 +1,62 @@
+html {
+    font-size: 100%;
+}
+body {
+    padding: 20rem;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.cube {
+    position: relative;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+   
+    animation: mycube 5s ease-in-out infinite;
+}
+.container {
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+}
+.cube__face {
+    width: 200px;
+    height: 200px;
+    border: 2px black solid;
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 2rem;
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,.4)) ;
+}
+
+.cube__face--front {background: rgba(10, 5, 55, 0.6);}
+.cube__face--back { background: rgba(137, 11, 184, 0.6);}
+.cube__face--right { background: rgba(153, 128, 250,.6);}
+.cube__face--left { background: rgba(87, 88, 187,.6);}
+.cube__face--top { background: rgba(7, 4, 40, 0.6);}
+.cube__face--bottom { background: rgba(18, 137, 167,.6);}
+
+.cube__face--front {transform: rotatey(0deg) translatez(100px)}
+.cube__face--back { transform: rotatey(180deg) translatez(100px);}
+.cube__face--right { transform: rotatey(90deg) translatez(100px)}
+.cube__face--left { transform: rotatey(-90deg) translatez(100px)}
+.cube__face--top { transform: rotateX(90deg) translatez(100px)}
+.cube__face--bottom { transform: rotateX(-90deg) translatez(100px)}
+
+
+.cube:hover {
+    transform: rotateY(200deg);  
+}
+
+@keyframes mycube {
+    form{
+        transform: rotateY(0deg) ;
+        background-color: rgb(12, 67, 130);
+    }
+    to{
+        transform:rotateY(140deg);
+        background-color: rgb(75, 21, 21);
+    }
+}

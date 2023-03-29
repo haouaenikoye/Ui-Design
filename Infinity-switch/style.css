@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+body {
+    background-color: rgb(73, 172, 111);
+}
+
+#myDIV2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bolder;
+    cursor: pointer;
+    color: rgb(120, 221, 159);
+    transition: 0.2s;
+    border: none;
+    background-color: transparent;
+}
+
+#myDIV2:hover {
+    color: rgb(56, 116, 79)
+}
+
+.off {
+    margin-left: auto;
+    margin-right: auto;
+    width: 160px;
+}
+
+.no-copy {
+    -webkit-user-select: none;
+  
+    -moz-user-select: none;
+    
+    -ms-user-select: none;
+    
+    user-select: none;
+   
+}
+
+.contener {
+    position: absolute;
+    left: calc(50% - 300px);
+    top: calc(50% - 75px);
+    transition: 2s ease-in;
+    opacity: 1;
+}
+
+.znikanie {
+    animation: op 2s linear infinite;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes op {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.road {
+    background-color: #525252;
+    width: 600px;
+    height: 150px;
+    transform: perspective(500px) rotateX(30deg);
+}
+
+.pasy {
+    transform: translateY(70px);
+    width: 600px;
+    height: 10px;
+    background: linear-gradient(90deg, #fff 0%, #fff 70%, #525252 70%, #525252 100%);
+    background-size: 120px;
+    animation: animate 0.5s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0px;
+    }
+
+    100% {
+        background-position: -120px;
+    }
+}
+
+.bok {
+    z-index: 2;
+    background-color: #2c2c2c;
+    width: 643px;
+    height: 25px;
+    transform: perspective(500px) rotateX(-20deg) translateX(-21px) translateY(-6px);
+}
+
+.shadow {
+    position: absolute;
+    z-index: -1;
+    background-color: red;
+    width: 648px;
+    height: 50px;
+    transform: perspective(500px) rotateX(10deg) translateX(-24px) translateY(-8px);
+    background: linear-gradient(#000, transparent);
+    opacity: 0.5;
+}
+
+.pos3 {
+    z-index: 10;
+    position: absolute;
+    transform: translateX(0px);
+    animation: wzium 10s linear infinite;
+}
+
+@keyframes wzium {
+    0% {
+        transform: translateX(25px);
+
+    }
+
+    50% {
+        transform: translateX(150px);
+
+    }
+
+    100% {
+        transform: translateX(25px);
+    }
+}
+
+.pos2 {
+    z-index: 10;
+    position: absolute;
+    transform: translateX(150px);
+}
+
+.pos {
+    z-index: 10;
+    position: absolute;
+    transform: translateX(0px);
+    animation: ruch2 1s linear infinite;
+}
+
+.player {
+    transform: translateX(450px);
+    z-index: 10;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: royalblue;
+    animation: ruch 1s linear infinite;
+}
+
+.shadow2 {
+    position: absolute;
+    z-index: -1;
+    background-color: red;
+    width: 100px;
+    height: 30px;
+    transform: perspective(500px) rotateX(10deg) translateX(0px) translateY(75px);
+    background: linear-gradient(transparent, #000, transparent);
+    background: radial-gradient(ellipse at center, #000 0%, transparent 75%);
+    animation: ruch3 1s linear infinite;
+    opacity: 0.5;
+}
+
+@keyframes ruch {
+    0% {
+        transform: rotate(0deg) translateY(0px);
+    }
+
+    100% {
+        transform: rotate(90deg) translateY(-50px);
+    }
+}
+
+@keyframes ruch2 {
+    0% {
+        transform: rotate(0deg) translateX(0px);
+    }
+
+    100% {
+        transform: rotate(0deg) translateX(-50px);
+    }
+}
+
+@keyframes ruch3 {
+    0% {
+        transform: rotate(0deg) translateX(0px) translateY(85px);
+    }
+
+    50% {
+        transform: rotate(0deg) translateX(25px) translateY(85px) scaleX(1.2);
+    }
+
+    100% {
+        transform: rotate(0deg) translateX(50px) translateY(85px);
+    }
+}
